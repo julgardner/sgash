@@ -22,6 +22,8 @@ sgash isolates itself from program failures by creating a child process
 to execute the programs the user specifies.
 THIS PROGRAM IS NOT POSIX COMPLIANT AND SHOULD NOT BE USED AS A REAL SHELL -
 IT IS ONLY INTENDED FOR USE AS A DEMONSTRATION OF BASIC SHELL OPERATIONS!
+Also, please don't pull request - this isn't that kind of repository.
+If you make a pull request, it will be ignored and you will be blocked.
 
 
    How to use the program
