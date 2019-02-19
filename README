@@ -1,0 +1,90 @@
+
+   Name      :  Julian Gardner
+   Student ID:  102215161
+   Class     :  CSCI 3453 001
+   Lab #     :  1
+   Due Date  :  Sep. 26, 2018
+
+
+
+                 README
+
+
+
+   Description of the program
+
+
+The program sgash is a simple shell program.
+It waits for input, and executes a program depending on that input.
+It also will display error messages if the program cannot be found
+or has errors.
+sgash isolates itself from program failures by creating a child process
+to execute the programs the user specifies.
+THIS PROGRAM IS NOT POSIX COMPLIANT AND SHOULD NOT BE USED AS A REAL SHELL -
+IT IS ONLY INTENDED FOR USE AS A DEMONSTRATION OF BASIC SHELL OPERATIONS!
+
+
+   How to use the program
+
+
+To exit sgash, type "exit" at the shell prompt.
+Type in the full file path of an executable to run it with no arguments.
+Typing in the name of an executable in your PATH environment variable
+works as well, even if it isn't the full file path.
+To use arguments, type the file path as before, adding a space afterwards, then
+add a space-delimited set of arguments after that.
+Example 1: cat /etc/foo.txt /etc/bar.txt /etc/baz.txt
+Example 2: /usr/bin/man gcc
+sgash does not support file redirection, pipes, or commands and arguments with
+quoted strings or escape characters.
+sgash also does not maintain a current working directory, so commands such as
+cd do not work!
+Because of this, be careful with running executables that use the shell's
+current working directory!
+Input with multiple consecutive spaces also does not work!
+
+Please see the section "How to build and run the program" for compilation
+instructions.
+
+
+   Source files
+
+
+Name:  sgash.c
+
+Main program. This is the entirety of the source code.
+
+
+   Circumstances of program
+
+
+The program runs successfully on Linux Mint 19 compiled with GCC 7.3.0.
+The program was designed for but not tested on the University of Colorado at Denver's
+CSEgrid server and its GCC version, but was designed for portability
+across POSIX compliant systems.
+The program does not run on Windows or Mac systems.
+
+
+   How to build and run the program
+
+
+1. Clone and download the GitHub repository.
+
+Now you should have a directory with the files:
+sgash.c
+Makefile
+README
+.gitignore
+
+2. Build the program.
+
+Change to the directory containing the listed files.
+
+Compile the program by:
+% make
+
+3. Run the program by:
+% ./sgash
+
+4. Delete the obj files, executables, core dump, and output file by:
+% make clean
